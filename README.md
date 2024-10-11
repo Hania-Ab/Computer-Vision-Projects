@@ -77,8 +77,46 @@ Ce projet implémente un système de détection de lignes de voie qui analyse un
 - OpenCV
 - NumPy
 
+### Installation des Bibliothèques Nécessaires
+```
+pip install opencv-python numpy
+```
+
+### Téléchargement de FFmpeg (Optionnel)
+
+Pour certaines fonctionnalités avancées d'encodage vidéo, FFmpeg peut être requis. Téléchargez-le depuis le site officiel de FFmpeg et assurez-vous qu'il est accessible via la variable d'environnement PATH.
+
 ## Utilisation
+
+### 1. Cloner le dépot
+```
+git clone https://github.com/votre-utilisateur/votre-projet.git](https://github.com/Hania-Ab/Computer-Vision-Projects.git
+cd Computer-Vision-Projects
+```
+
+### 2. Exécuter le Script
+```
+python Lines_Detection_Project.py
+```
 
 ## Explications du Code
 
+Voici une présentation détaillée des principales fonctions utilisées dans ce projet.
+
+### 1. *region_of_interest*
+Cette fonction applique un masque à l'image pour ne conserver que la région d'intérêt où les lignes de voie sont attendues.
+
+### 2. *extend_lines*
+Cette fonction filtre les lignes détectées, sépare les lignes de gauche et de droite, et calcule la moyenne pour obtenir une ligne unique de chaque côté.
+
+### 3. *detect_lines*
+Cette fonction principale détecte les lignes sur une frame donnée, met à jour l'historique des lignes, calcule la direction et la distance, et dessine les informations sur l'image.
+
+### 4. La Boucle Principale
+La boucle principale lit chaque frame de la vidéo, applique la détection des lignes, affiche le résultat et enregistre la vidéo avec les annotations.
+
+
 ## Affichage des résultats
+
+![Démonstration du projet](https://github.com/Hania-Ab/Computer-Vision-Projects/blob/main/Output%20Lines%20Detection.gif)
+
